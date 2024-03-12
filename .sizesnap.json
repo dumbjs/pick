@@ -1,0 +1,17 @@
+{
+  "dist/get.js": {
+    "size": "398B",
+    "brotli": "214B",
+    "gzip": "270B"
+  },
+  "dist/index.js": {
+    "size": "50B",
+    "brotli": "54B",
+    "gzip": "60B"
+  },
+  "dist/set.js": {
+    "size": "835B",
+    "brotli": "339B",
+    "gzip": "407B"
+  }
+}

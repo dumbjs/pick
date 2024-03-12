@@ -1,7 +1,7 @@
 {
-  "name": "pkg",
-  "version": "0.0.0",
-  "repository": "git@github.com:barelyhuman/pkg.git",
+  "name": "@dumbjs/pick",
+  "version": "0.0.1",
+  "repository": "git@github.com:dumbjs/pick.git",
   "license": "MIT",
   "type": "module",
   "author": "Reaper <ahoy@barelyhuman.dev>",

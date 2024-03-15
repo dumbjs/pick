@@ -8,10 +8,10 @@
  */
 
 /**
- * @param obj
- * @param {string} path
- * @param {unknown} value
- *
+ * `set` module provides a simple object
+ * walker to set the value of deeply nested inside
+ * the object, this modifies the original object
+ * so use it carefully
  * ```js
  * const obj = {a:1}
  * set(obj,"b",10)
@@ -20,6 +20,9 @@
  * get(obj,"b") //=> {a:3}
  * get(obj,"b.a") //=> 3
  * ```
+ * @param obj
+ * @param {string} path
+ * @param {unknown} value
  */
 export function set<T extends object>(obj: T, path: string, value: unknown) {
   if (typeof obj != 'object') {

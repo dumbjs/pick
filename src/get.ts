@@ -9,15 +9,21 @@
  */
 
 /**
- * @param obj
- * @param {string} path
- * @returns
+ * `get` module provides a simple object
+ * walker to get the value deeply nested inside
+ * the object without throwing an error.
  *
+ * This allows you to either get the nested value
+ * or return a default value if a nothing is found
+ * 
  * ```js
  * const value = get({a:1},"a") //=> 1
  * const value = get({a:1},"b") //=> undefined
  * const value = get({a:1},"b",2) //=> 2
  * ```
+ * @param obj
+ * @param {string} path
+ * @returns
  */
 export function get<T, Value extends unknown>(
   obj: T,

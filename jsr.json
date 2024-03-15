@@ -1,0 +1,9 @@
+{
+  "name": "@dumbjs/pick",
+  "version": "0.0.2",
+  "exports": {
+    ".": "./src/index.ts",
+    "./get": "./src/get.ts",
+    "./set": "./src/set.ts"
+  }
+}

@@ -20,6 +20,7 @@
     "next": "bumpp",
     "fix": "prettier --write .",
     "test": "uvu -r tsm tests",
+    "test:types": "tsc --noEmit false -p .",
     "test:ci": "c8 uvu -r tsm tests ",
     "size": "sizesnap",
     "prepare": "husky install"

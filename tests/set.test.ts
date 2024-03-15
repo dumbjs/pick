@@ -48,4 +48,10 @@ test('set new array paths', () => {
   assert.equal(source.a['c'][1].d, 3)
 })
 
+test.only('change original object', () => {
+  const obj = { a: 1 }
+  set(obj, 'a.b', 3)
+  assert.equal(obj, { a: { b: 3 } })
+})
+
 test.run()

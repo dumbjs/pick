@@ -12,7 +12,7 @@
  * walker to set the value of deeply nested inside
  * the object, this modifies the original object
  * so use it carefully
- * ```js
+ * ```
  * const obj = {a:1}
  * set(obj,"b",10)
  * get(obj,"b") //=> 10

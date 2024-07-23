@@ -7,9 +7,18 @@
   "type": "module",
   "author": "Reaper <ahoy@barelyhuman.dev>",
   "exports": {
-    ".": "./dist/index.js",
-    "./get": "./dist/get.js",
-    "./set": "./dist/set.js",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./get": {
+      "types": "./dist/get.d.ts",
+      "import": "./dist/get.js"
+    },
+    "./set": {
+      "types": "./dist/set.d.ts",
+      "import": "./dist/set.js"
+    },
     "./package.json": "./package.json"
   },
   "engines": {

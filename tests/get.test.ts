@@ -24,8 +24,12 @@ test('array paths', () => {
     a: {
       b: [{ c: 1 }],
     },
+    b: {
+      c: [0, 1],
+    },
   }
   assert.equal(get(source, 'a.b.[0].c'), 1)
+  assert.equal(get(source, 'b.c.[0]'), 0)
 })
 
 test('get key over path', () => {

@@ -46,19 +46,19 @@ export function get<T, Value extends unknown>(
 
   let point: Value = obj as Value
   for (let d of pathSplits) {
-    if (!point) {
+    if (point === undefined || point === null) {
       return defaultValue
     }
     if (d.startsWith('[') && d.endsWith(']')) {
       const index = d.replace(/\[(\d+)?\]/, '$1')
-      if (point[index]) {
+      if (typeof point === 'object' && index in point) {
         point = point[index]
       }
     } else {
       point = point[d]
     }
   }
-  return point == 'undefined' || (point == 'null' && defaultValue)
+  return (point === 'undefined' || point === 'null') && defaultValue
     ? defaultValue
     : point
 }

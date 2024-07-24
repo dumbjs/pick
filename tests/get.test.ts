@@ -28,4 +28,47 @@ test('array paths', () => {
   assert.equal(get(source, 'a.b.[0].c'), 1)
 })
 
+test('get key over path', () => {
+  const source = {
+    'a.b': 1,
+    'a': {
+      b: [{ c: 1 }],
+    },
+  }
+  assert.equal(get(source, 'a.b'), 1)
+})
+
+test('access empty keys', () => {
+  const source = { a: { '': 1 } }
+  assert.equal(get(source, 'a.[]'), 1)
+})
+
+test('handle complex paths', () => {
+  const source = {
+    a: {
+      '1.32': { '["b"]': { c: { "['d']": { '\ne\n': { f: { g: 8 } } } } } },
+    },
+  }
+  assert.equal(get(source, 'a.1..32.["b"].c.[\'d\'].\ne\n.f.g'), 8)
+})
+
+test('undefined on nullish object', () => {
+  const source = null
+  assert.equal(get(source, 'a'), undefined)
+})
+
+test('deep path is nullish', () => {
+  const source = null
+  assert.equal(get(source, 'a.b.c'), undefined)
+})
+
+test('return null from path', () => {
+  const source = {
+    a: {
+      b: null,
+    },
+  }
+  assert.equal(get(source, 'a.b'), null)
+})
+
 test.run()

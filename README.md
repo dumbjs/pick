@@ -27,3 +27,7 @@ import { set } from '@dumbjs/pick/set'
 - [`pick`](/tests/pick.test.ts)
 - [`get`](/tests/get.test.ts)
 - [`set`](/tests/set.test.ts)
+
+
+### License 
+[MIT](/LICENSE)

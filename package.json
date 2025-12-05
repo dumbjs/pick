@@ -1,6 +1,6 @@
 {
   "name": "@dumbjs/pick",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Straightforward object picker and walkers",
   "repository": "git@github.com:dumbjs/pick.git",
   "license": "MIT",

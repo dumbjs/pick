@@ -10,14 +10,14 @@ jobs:
     permissions:
       contents: read
       id-token: write
-      
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.x'
+          node-version: '24.x'
           registry-url: 'https://registry.npmjs.org'
 
       - name: Install dependencies
@@ -33,5 +33,3 @@ jobs:
         run: |
           npm publish
           npx jsr publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
